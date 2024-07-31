@@ -1,0 +1,31 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.home-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+.forgot-password {
+  color: rgb(56, 56, 245);
+  cursor: pointer;
+}
+
+.form-width {
+  width: 75%;
+}
+
+@media (min-width: 768px) {
+  .form-width {
+    width: 50%;
+  }
+}
