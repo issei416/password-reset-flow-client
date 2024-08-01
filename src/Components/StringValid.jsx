@@ -10,8 +10,10 @@ const StringValid = () => {
   const [otp, setOtp] = useState("");
   const [verified, setVerified] = useState(false);
   const [error, setError] = useState(false); 
-  const baseURL = import.meta.env.VITE_backendBaseURL;
-  const redirectURL = import.meta.env.VITE_frontendRedirectURL;
+  const baseURL = "https://password-reset-flow-server.onrender.com/api/user/";
+  const redirectURL = "https://password-reset-flow-client-devit.netlify.app";
+  // const baseURL = import.meta.env.VITE_backendBaseURL;
+  // const redirectURL = import.meta.env.VITE_frontendRedirectURL;
 
   const handleSetError = (msg) => {
     setError(msg);
