@@ -7,14 +7,12 @@ import passwordicon from "../assets/password-icon.png";
 const Login = () => {
   const [loggedin, setLoggedin] = useState(false);
   const [registered, setRegistered] = useState(false);
-  const [verified, setVerified] = useState(false);
   const [action, setAction] = useState("Register");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const [matchstring, setMatchstring] = useState("");
   const baseURL = "https://password-reset-flow-server.onrender.com/api/user/";
   // const baseURL = import.meta.env.VITE_backendBaseURL;
   //   const [showToast, setShowToast] = useState({ success: false, failure: false });
@@ -111,6 +109,7 @@ const Login = () => {
         handleSetError("Please enter your email");
         return;
       } else {
+        console.log(email);
         const payload = { email };
         const res = await axios.post(
           `${baseURL}forgotpassword`,
